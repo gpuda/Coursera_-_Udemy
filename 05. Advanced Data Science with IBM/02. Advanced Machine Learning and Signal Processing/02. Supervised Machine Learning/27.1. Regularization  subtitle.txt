@@ -1,0 +1,45 @@
+So in this video we will
+cover regularization. So consider your training data and a machine learning algorithm which
+perfectly fits your training data. Of course,
+you have the risk of overfitting. So I've told you how to quantify
+overfitting by using a test and a training data set. But what can you do if
+you're actually overfitting? If you're overfitting, means that
+your model is basically too good, so it can explain the data too well. So one thing, of course,
+you can do is you use a more simple model. For example, linear or
+logistic regression, in contrast to the machines,
+KNN or gradient boosting trees. But there's another thing you can do. So what if I will tell you that there's
+actually a parameter in the model that you can tune in order to specify how good
+it should fit the training data. So you can actually tune this knob until you get also good
+performance under unseen data. So let's have a look how this works. So this is the square of errors function,
+and you basically sum up the error for all your training examples
+by taking the real value and subtracting the predicted value. So this formula here is nothing
+else than linear regression. And you basically just take Xij,
+so i stands for the index of the training example. And j stands for
+the actual dimension or feature. And then you have beta j,
+which is the parameter you are learning. So let's consider this
+overfitting example. So definitely this model
+is far too specific. So therefore we can add
+a regularization term as follows. So we take each parameter beta,
+and we take the absolute value, and we take the sum. So this basically contributes
+to the overall sum. So remember,
+you're taking the first derivative of this in order to find the minimum
+based on the parameter's beta. That means the more we add
+to this overall value, the worse we are actually performing. And that's something we actually want,
+since we want to prevent overfitting. We can specify the parameter
+lambda in order to specify how strong this effect should be. So lambda of 0 is ignoring this effect. So this is called 1 or
+LASSO regularization. .
+And LASSO stands for least absolute shrinkage and
+selection operator. Same contrast to L1, the axis starts at
+2 regularization, which is called rich. And you can basically remember it,
+because in L2 regularization, we don't take the absolute value of
+the beta parameters, we take the square. So the result of this is that we penalize
+large parameters in a model even more. So it's all about penalizing
+large parameters. And if a model wants to learn large
+parameters, then we penalize. And therefore we will stick
+the model to overfit. So in summary, L1 can be used to
+even remove features from the model. But it's computationally
+more expensive than L2. L2 you can't use for feature selection,
+but it's computationally more efficient. And again, it penalizes large
+values of parameters beta more. And therefore it's some sort
+of a stronger regularization. I'm personally only using
+L2 rigorization in my work.
